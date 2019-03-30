@@ -17,10 +17,10 @@ class Content extends Component {
 
         <Section>
             
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/requests" component={About}/>
-        <Route exact path="/approves" component={Topics}/>
-        <Route exact path="/document" component={Topics}/>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/requests" component={About}/>
+            <Route exact path="/approves" component={Topics}/>
+            <Route exact path="/document" component={Topics}/>
             <Card>
                 <Card.Content>
                     <Column.Group>
