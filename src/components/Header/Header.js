@@ -6,6 +6,7 @@ import { Navbar, Field, Control, Button, Icon, Tab, } from "rbx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
+import { Link } from 'react-router-dom'
 
 import logo from '../../asset/images/logo-outline-w.png';
 // import { TabGroup } from 'rbx/components/tab/tab-group';
@@ -58,11 +59,12 @@ class Header extends Component {
             </Navbar.Menu>
           </Navbar>
           <Tab.Group>
-            <Tab active>หน้าแรก</Tab>
-            <Tab>รายการคำขอ&nbsp;<span className="Counter"> 3 </span></Tab>
-            <Tab>อนมุัติ&nbsp;<span className="Counter"> 0 </span></Tab>
-            <Tab>คู่มือการใช้งาน</Tab>
-          </Tab.Group>
+            <Tab as={Link} to="/"> หน้าแรก</Tab>
+            <Tab as={Link} to="/requests" >รายการคำขอ&nbsp;<span className="Counter"> 3 </span></Tab>
+            <Tab as={Link} to="/approves">อนมุัติ&nbsp;<span className="Counter"> 0 </span></Tab>
+            <Tab as={Link} to="/document">คู่มือการใช้งาน</Tab>
+          </Tab.Group> 
+
       </div>
     );
   }

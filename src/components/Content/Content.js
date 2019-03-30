@@ -6,10 +6,21 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Section, Card, Column, Title, Control, Icon, Input, Table } from "rbx";
 
 
+
+import {  Route, } from 'react-router-dom'
+
 class Content extends Component {
     render() {
       return (
+
+        
+
         <Section>
+            
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/requests" component={About}/>
+        <Route exact path="/approves" component={Topics}/>
+        <Route exact path="/document" component={Topics}/>
             <Card>
                 <Card.Content>
                     <Column.Group>
@@ -171,5 +182,25 @@ class Content extends Component {
 }
 
 }
+
+
+  
+const Home = () => (
+    <div>
+      <h2>Home</h2>
+    </div>
+  )
+  
+  const About = () => (
+    <div>
+      <h2>About</h2>
+    </div>
+  )
+  const Topics= () => (
+    <div>
+      <h2>Topics</h2>
+    </div>
+  )
+  
 
 export default Content;
