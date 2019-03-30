@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Section, Card, Column, Title, Control, Icon, Input, Table } from "rbx";
 
 
-
+import ConnectDB from '../../models/ConnectDB'
 import {  Route, } from 'react-router-dom'
 
 class Content extends Component {
@@ -188,6 +188,7 @@ class Content extends Component {
 const Home = () => (
     <div>
       <h2>Home</h2>
+      <ConnectDB/>
     </div>
   )
   
