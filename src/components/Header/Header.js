@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
-import logo from '../asset/images/logo-outline-w.png';
+import logo from '../../asset/images/logo-outline-w.png';
 // import { TabGroup } from 'rbx/components/tab/tab-group';
 
 class Header extends Component {

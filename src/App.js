@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import { Container } from 'rbx';
 
-import Header from './Header/header'
-import Content from './Content/content'
+import Header from './components/Header/Header'
+import Content from './components/Content/Content'
 
 class App extends Component {
   render() {
