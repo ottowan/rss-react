@@ -5,23 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Section, Card, Column, Title, Control, Icon, Input, Table } from "rbx";
 
-
-import ConnectDB from '../../models/ConnectDB'
 import {  Route, } from 'react-router-dom'
+
+import Projects from '../../Handlers/Projects'
 
 class Content extends Component {
     render() {
       return (
 
-        
 
         <Section>
-            
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/requests" component={About}/>
-            <Route exact path="/approves" component={Topics}/>
-            <Route exact path="/document" component={Topics}/>
-            <Card>
+
+              <Card>
                 <Card.Content>
                     <Column.Group>
                         <Column size="9">
@@ -93,86 +88,10 @@ class Content extends Component {
                                 <Table.Heading>หมายเหตุ</Table.Heading>
                             </Table.Row>
                         </Table.Foot>
-                        <Table.Body>
-                            <Table.Row>
-                            <Table.Heading>1</Table.Heading>
-                            <Table.Cell>
-                                <a
-                                href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
-                                title="Leicester City F.C."
-                                >
-                                โครงการ
-                                </a>{' '}
-                                <strong>(C)</strong>
-                            </Table.Cell>
-                            <Table.Cell>38</Table.Cell>
-                            <Table.Cell>23</Table.Cell>
-                            <Table.Cell>12</Table.Cell>
-                            <Table.Cell>3</Table.Cell>
-                            <Table.Cell>68</Table.Cell>
-                            <Table.Cell>
-                                Qualification for the{' '}
-                                <a
-                                href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"
-                                title="2016–17 UEFA Champions League"
-                                >
-                                Champions League group stage
-                                </a>
-                            </Table.Cell>
-                            </Table.Row>
-                            <Table.Row>
-                            <Table.Heading>2</Table.Heading>
-                            <Table.Cell>
-                                <a
-                                href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
-                                title="Leicester City F.C."
-                                >
-                                Leicester City
-                                </a>{' '}
-                                <strong>(C)</strong>
-                            </Table.Cell>
-                            <Table.Cell>3</Table.Cell>
-                            <Table.Cell>68</Table.Cell>
-                            <Table.Cell>36</Table.Cell>
-                            <Table.Cell>+32</Table.Cell>
-                            <Table.Cell>81</Table.Cell>
-                            <Table.Cell>
-                                Qualification for the{' '}
-                                <a
-                                href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"
-                                title="2016–17 UEFA Champions League"
-                                >
-                                Champions League group stage
-                                </a>
-                            </Table.Cell>
-                            </Table.Row>                   
-                            <Table.Row selected>
-                            <Table.Heading>3</Table.Heading>
-                            <Table.Cell>
-                                <a
-                                href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
-                                title="Leicester City F.C."
-                                >
-                                Leicester City
-                                </a>{' '}
-                                <strong>(C)</strong>
-                            </Table.Cell>
-                            <Table.Cell>38</Table.Cell>
-                            <Table.Cell>23</Table.Cell>
-                            <Table.Cell>12</Table.Cell>
-                            <Table.Cell>+32</Table.Cell>
-                            <Table.Cell>81</Table.Cell>
-                            <Table.Cell>
-                                Qualification for the{' '}
-                                <a
-                                href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"
-                                title="2016–17 UEFA Champions League"
-                                >
-                                Champions League group stage
-                                </a>
-                            </Table.Cell>
-                            </Table.Row>                    
-                        </Table.Body>
+                        <Route exact path="/" component={Projects}/>
+                        <Route exact path="/requests" component={Projects}/>
+                        <Route exact path="/approves" component={Projects}/>
+                        <Route exact path="/document" component={Projects}/>
                     </Table>
                 
                 </Card.Content>
@@ -184,24 +103,6 @@ class Content extends Component {
 }
 
 
-  
-const Home = () => (
-    <div>
-      <h2>Home</h2>
-      <ConnectDB/>
-    </div>
-  )
-  
-  const About = () => (
-    <div>
-      <h2>About</h2>
-    </div>
-  )
-  const Topics= () => (
-    <div>
-      <h2>Topics</h2>
-    </div>
-  )
   
 
 export default Content;
