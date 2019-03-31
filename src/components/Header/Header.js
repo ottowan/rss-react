@@ -60,7 +60,7 @@ class Header extends Component {
           </Navbar>
           <Tab.Group>
             <Tab as={Link} to="/"> หน้าแรก</Tab>
-            <Tab as={Link} to="/requests" >รายการคำขอ&nbsp;<span className="Counter"> 3 </span></Tab>
+            <Tab as={Link} to="/notapproves" >รายการคำขอ&nbsp;<span className="Counter"> 3 </span></Tab>
             <Tab as={Link} to="/approves">อนมุัติ&nbsp;<span className="Counter"> 0 </span></Tab>
             <Tab as={Link} to="/document">คู่มือการใช้งาน</Tab>
           </Tab.Group> 

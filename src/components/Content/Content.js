@@ -8,6 +8,8 @@ import { Section, Card, Column, Title, Control, Icon, Input, Table } from "rbx";
 import {  Route, } from 'react-router-dom'
 
 import Projects from '../../Handlers/Projects'
+import ProjectsApproved from '../../Handlers/ProjectsApproved'
+import ProjectsNotApproved from '../../Handlers/ProjectsNotApproved'
 
 class Content extends Component {
     render() {
@@ -89,8 +91,8 @@ class Content extends Component {
                             </Table.Row>
                         </Table.Foot>
                         <Route exact path="/" component={Projects}/>
-                        <Route exact path="/requests" component={Projects}/>
-                        <Route exact path="/approves" component={Projects}/>
+                        <Route exact path="/notapproves" component={ProjectsNotApproved}/>
+                        <Route exact path="/approves" component={ProjectsApproved}/>
                         <Route exact path="/document" component={Projects}/>
                     </Table>
                 
