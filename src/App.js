@@ -12,9 +12,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Header>
-        </Header>
-
+        <Header></Header>
         <Content></Content>
       </Container>
     );

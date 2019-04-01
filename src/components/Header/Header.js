@@ -9,7 +9,10 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 import logo from '../../asset/images/logo-outline-w.png';
-// import { TabGroup } from 'rbx/components/tab/tab-group';
+import HeaderCountAll from "./HeaderCountAll"
+import HeaderCountApproved from "./HeaderCountApproved"
+import HeaderCountNotApproved from "./HeaderCountNotApproved"
+import HeaderCountWaitApproved from "./HeaderCountWaitApproved"
 
 class Header extends Component {
   render() {
@@ -60,8 +63,10 @@ class Header extends Component {
           </Navbar>
           <Tab.Group>
             <Tab as={Link} to="/"> หน้าแรก</Tab>
-            <Tab as={Link} to="/notapproves" >รายการคำขอ&nbsp;<span className="Counter"> 3 </span></Tab>
-            <Tab as={Link} to="/approves">อนมุัติ&nbsp;<span className="Counter"> 0 </span></Tab>
+            <Tab as={Link} to="/" >รายการคำขอ&nbsp;<span className="Counter"> <HeaderCountAll/> </span></Tab>
+            <Tab as={Link} to="/approves">อนมุัติ&nbsp;<span className="Counter"> <HeaderCountApproved/> </span></Tab>
+            <Tab as={Link} to="/notapproves">ไม่อนมุัติ&nbsp;<span className="Counter"> <HeaderCountNotApproved/> </span></Tab>
+            <Tab as={Link} to="/waitapproves">รอตรวจสอบ&nbsp;<span className="Counter"> <HeaderCountWaitApproved/> </span></Tab>
             <Tab as={Link} to="/document">คู่มือการใช้งาน</Tab>
           </Tab.Group> 
 

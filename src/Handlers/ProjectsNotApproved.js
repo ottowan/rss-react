@@ -1,7 +1,7 @@
 
 import React, {  useState, useEffect  } from 'react';
 import axios from 'axios';
-import { Table } from "rbx";
+import { Table, Tag } from "rbx";
 
 
 
@@ -11,7 +11,7 @@ function ProjectsNotApproved(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects?project_status=0',
+            'http://localhost:1337/projects?project_status=2',
           );
           console.log(result.data)
           setData(result.data)
@@ -39,8 +39,10 @@ function ProjectsNotApproved(){
                     <Table.Cell>xxx</Table.Cell>
                     <Table.Cell>1</Table.Cell>
                     <Table.Cell>{item.created_at}</Table.Cell>
-                    <Table.Cell>{item.requset_date}</Table.Cell>
-                    <Table.Cell>{item.project_status}</Table.Cell>
+                    <Table.Cell>{item.requset_date}</Table.Cell>                    
+                    <Table.Cell>
+                        {(item.project_status === 1) ? <Tag color='primary'> อนุมติ </Tag> : <Tag color='danger'> ไม่อนุมติ </Tag>}
+                    </Table.Cell>
                     <Table.Cell> - </Table.Cell>
                 </Table.Row>
             ))}

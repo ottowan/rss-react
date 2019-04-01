@@ -11,7 +11,7 @@ function ProjectsApproved(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects?project_status=1',
+            'http://localhost:1337/projects?project_status=0',
           );
           console.log(result.data)
           setData(result.data)
@@ -41,7 +41,7 @@ function ProjectsApproved(){
                     <Table.Cell>{item.created_at}</Table.Cell>
                     <Table.Cell>{item.requset_date}</Table.Cell>                    
                     <Table.Cell>
-                        {(item.project_status === 1) ? <Tag color='primary'> อนุมติ </Tag> : <Tag color='danger'> ไม่อนุมติ </Tag>}
+                        <Tag color='warning'> รอตรวจอนุมัติ </Tag> 
                     </Table.Cell>
                     <Table.Cell> - </Table.Cell>
                 </Table.Row>

@@ -1,7 +1,7 @@
 
 import React, {  useState, useEffect  } from 'react';
 import axios from 'axios';
-import { Table } from "rbx";
+import { Table, Tag } from "rbx";
 
 
 
@@ -22,6 +22,9 @@ function Projects(){
 
     }, [])
 
+
+
+
     return (
         <Table.Body >
             {data.map((item, index) => (
@@ -40,7 +43,19 @@ function Projects(){
                     <Table.Cell>1</Table.Cell>
                     <Table.Cell>{item.created_at}</Table.Cell>
                     <Table.Cell>{item.requset_date}</Table.Cell>
-                    <Table.Cell>{item.project_status}</Table.Cell>
+                    <Table.Cell>
+
+                        {(() => {
+                            switch (item.project_status) {
+                            case 0: return  <Tag color='warning'> รออนุมัติ </Tag>;
+                            case 1: return  <Tag color='primary'> อนุมติ </Tag>;
+                            case 2:  return <Tag color='danger'> ไม่อนุมติ </Tag>;
+                            default: return <Tag color='warning'> รออนุมัติ </Tag>;
+                            }
+                        })()}
+
+
+                    </Table.Cell>
                     <Table.Cell> - </Table.Cell>
                 </Table.Row>
             ))}
