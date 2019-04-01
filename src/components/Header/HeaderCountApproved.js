@@ -6,7 +6,7 @@ function HeaderCountApproved(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects/count?project_status=1',
+            `${process.env.REACT_APP_ROOT_API_URL}/projects/count?project_status=1`,
           );
           console.log(result.data)
           setCountAll(result.data)

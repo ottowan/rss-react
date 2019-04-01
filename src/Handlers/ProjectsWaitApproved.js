@@ -11,7 +11,7 @@ function ProjectsApproved(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects?project_status=0',
+            `${process.env.REACT_APP_ROOT_API_URL}/projects?project_status=0`,
           );
           console.log(result.data)
           setData(result.data)

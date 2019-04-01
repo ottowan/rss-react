@@ -11,8 +11,9 @@ function Projects(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects',
+            `${process.env.REACT_APP_ROOT_API_URL}/projects`
           );
+
           console.log(result.data)
           setData(result.data)
     }

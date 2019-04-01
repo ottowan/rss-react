@@ -7,6 +7,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
+    "dotenv": "^7.0.0",
     "rbx": "^2.1.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -14,9 +15,9 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-scripts start .env",
+    "build": "react-scripts build .env",
+    "test": "react-scripts test .env",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

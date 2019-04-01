@@ -6,7 +6,7 @@ function HeaderCountAll(){
 
     async function fetchMyAPI() {
         const result = await axios(
-            'http://localhost:1337/projects/count',
+            `${process.env.REACT_APP_ROOT_API_URL}/projects/count`,
           );
           console.log(result.data)
           setCountAll(result.data)
